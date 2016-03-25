@@ -56,8 +56,16 @@ ListElmt           *tail;
 //	destroy should be set to a user-defined function that calls free for each dynamically
 //	allocated member as well as for the structure itself. For a linked list containing
 //	data that should not be freed, destroy should be set to NULL.
+//Complexity: O(1)
 void list_init(List *list, void (*destroy)(void *data));
 
+//Return Value:	None.
+//Description:	Destroys the linked list specified by list. No other operations
+//	are permitted after calling list_destroy unless list_init is called again. The list_
+//	destroy operation removes all elements from a linked list and calls the function
+//	passed as destroy to list_init once for each element as it is removed, provided
+//	destroy was not set to NULL.
+//Complexity:	O(n), where n is the number of elements in the linked list.
 void list_destroy(List *list);
 
 int list_ins_next(List *list, ListElmt *element, const void *data);
