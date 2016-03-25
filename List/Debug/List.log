@@ -1,16 +1,14 @@
-﻿Build started 3/25/2016 10:00:20 AM.
+﻿Build started 3/25/2016 11:27:53 AM.
      1>Project "E:\算法精解源码工作空间\MasterAlog\List\List.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt "ex-1.c" list.c
          list.c
+     1>c1 : fatal error C1083: Cannot open source file: 'list.c': No such file or directory
          ex-1.c
+     1>e:\算法精解源码工作空间\masteralog\list\ex-1.c(13): fatal error C1083: Cannot open include file: 'list.h': No such file or directory
          Generating Code...
-       Link:
-         D:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\算法精解源码工作空间\MasterAlog\Debug\List.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\算法精解源码工作空间\MasterAlog\Debug\List.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\算法精解源码工作空间\MasterAlog\Debug\List.lib" /MACHINE:X86 "Debug\ex-1.obj"
-         Debug\list.obj
-         List.vcxproj -> E:\算法精解源码工作空间\MasterAlog\Debug\List.exe
-     1>Done Building Project "E:\算法精解源码工作空间\MasterAlog\List\List.vcxproj" (Build target(s)).
+     1>Done Building Project "E:\算法精解源码工作空间\MasterAlog\List\List.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.68
+Time Elapsed 00:00:00.70

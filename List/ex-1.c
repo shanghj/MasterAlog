@@ -20,10 +20,10 @@
 
 static void print_list(const List *list) {
 
-	ListElmt           *element;
+	ListElmt			*element;
 
-	int                *data,
-		i;
+	int					*data;
+	int					i;
 
 	/*****************************************************************************
 	*                                                                            *
@@ -32,8 +32,15 @@ static void print_list(const List *list) {
 	*****************************************************************************/
 
 	fprintf(stdout, "List size is %d\n", list_size(list));
+	
+	//修改后的实现，商宏杰2016-3-25
+	for(element = list_head(list), i = 0; !list_is_tail(element); element = list_next(element), i++)
+	{
+		fprintf(stdout, "list[%03d]=%03d\n", i, *(int*)list_data(element));
+	}
 
-	i = 0;
+	//这是原例程中的实现方法
+	/*i = 0;
 	element = list_head(list);
 
 	while (1) {
@@ -48,7 +55,7 @@ static void print_list(const List *list) {
 		else
 			element = list_next(element);
 
-	}
+	}*/
 
 	return;
 
@@ -65,8 +72,8 @@ int main(int argc, char **argv) {
 	List               list;
 	ListElmt           *element;
 
-	int                *data,
-		i;
+	int                *data;
+	int					i;
 
 	/*****************************************************************************
 	*                                                                            *
@@ -86,12 +93,12 @@ int main(int argc, char **argv) {
 
 	for (i = 10; i > 0; i--) {
 
-		if ((data = (int *)malloc(sizeof(int))) == NULL)
+		if ((data = (int *)malloc(sizeof(int))) == NULL)	//分配内存失败
 			return 1;
 
 		*data = i;
 
-		if (list_ins_next(&list, NULL, data) != 0)
+		if (list_ins_next(&list, NULL, data) != 0)			//插入失败
 			return 1;
 
 	}
