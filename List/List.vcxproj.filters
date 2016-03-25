@@ -18,12 +18,12 @@
     <ClCompile Include="ex-1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="list.c">
+    <ClCompile Include="..\source\list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list.h">
+    <ClInclude Include="..\include\list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
